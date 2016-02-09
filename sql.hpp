@@ -11,13 +11,13 @@
  * Definition of sql helper metafunctions
  */
 
-#include <sql/sql_base.hpp>
-#include <sql/select.hpp>
-#include <sql/from.hpp>
-#include <sql/where.hpp>
-#include <sql/groupby.hpp>
-#include <sql/having.hpp>
-#include <sql/orderby.hpp>
+#include <query-freaks/sql_base.hpp>
+#include <query-freaks/select.hpp>
+#include <query-freaks/from.hpp>
+#include <query-freaks/where.hpp>
+#include <query-freaks/groupby.hpp>
+#include <query-freaks/having.hpp>
+#include <query-freaks/orderby.hpp>
 
 namespace sql {
 

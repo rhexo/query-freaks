@@ -9,8 +9,8 @@
 #include <string>
 #include <type_traits>
 
-#include <sql/sql_base.hpp>
-#include <sql/binder.hpp>
+#include <query-freaks/sql_base.hpp>
+#include <query-freaks/binder.hpp>
 
 namespace sql {
   

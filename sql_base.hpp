@@ -126,54 +126,11 @@ namespace sql {
     
   };
 
-
-
-  // template <class F, class ...Ent, int Order = 0, int ONull = 0>
-  // struct expr<F,Ent...,Order,ONull> : public expr<Ent...,Order,ONull>
-  // {
-  // public:
-  //   /** constructor */
-  //   expr() : expr<Ent...,Order,ONull>() {}
-
-  //   template <class ...Args>
-  //   std::string operator()(binder<Args...>& b) 
-  //   {      
-  //     return F()(b) + std::string(" ") + expr<Ent...,Order,ONull>::operator()(b);
-  //   }
-    
-  //   std::string operator()() 
-  //   {      
-  //     return  F()() + std::string(" ") + expr<Ent...,Order,ONull>::operator()();
-  //   }
-  // };
-
-
-  // template <class F, int Order = 0, int ONull = 0>
-  // struct expr<F,Order,ONull>
-  // {
-  // public:
-  //   /** constructor */
-  //   expr() {}
-
-  //   template <class ...Args>
-  //   std::string operator()(binder<Args...>& b) 
-  //   {      
-  //     return F()(b);
-  //   }
-    
-  //   std::string operator()() 
-  //   {      
-  //     return  F()();
-  //   }
-  // };
-
-
-
 };
 
-#include <sql/binder.hpp>
-#include <sql/string.hpp>
-#include <sql/var.hpp>
+#include <query-freaks/binder.hpp>
+#include <query-freaks/string.hpp>
+#include <query-freaks/var.hpp>
 
 
 #endif

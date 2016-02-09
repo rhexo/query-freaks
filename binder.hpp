@@ -10,7 +10,7 @@
 #include <tuple>
 #include <string>
 #include <utility>
-#include <sql/sql_base.hpp>  
+#include <query-freaks/sql_base.hpp>  
 
 namespace sql {
   

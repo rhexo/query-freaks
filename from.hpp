@@ -10,7 +10,7 @@
 #include <boost/mpl/vector_c.hpp>
 #include <string>
 
-#include <sql/sql_base.hpp>
+#include <query-freaks/sql_base.hpp>
 
 namespace sql {
 
