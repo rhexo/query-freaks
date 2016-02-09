@@ -9,6 +9,8 @@ SQL metalanguage in c++ context. Using template issue to define sql expression. 
 
 // Simple example of query difinition in c++ context
 
+   using namespace sql;
+
 // Construct binder object
   sql::binder<
     sql::var<_sel::f_name>,
@@ -64,7 +66,7 @@ SQL metalanguage in c++ context. Using template issue to define sql expression. 
 
 ```
 
-to standatd out will be out 
+cout print as result this string:
 
 ```eshell
 result(): SELECT F_1, F_2, F_3, F_4, F_5, F_6, F_7, F_8 FROM T_1, T_2 AS q  INNER JOIN T_3 AS w  ON ( w.a1 = q.a1 ) AND ( w.a2 = q.a2 )  WHERE ( ( F_1 = John ) AND ( F_2 > 99 ) ) GROUP BY F_1, F_2 HAVING ( ( F_2 > 100 ) AND ( F_3 = JB7 ) ) ORDER BY F_1 DESC NULLS LAST, F_2 ASC NULLS FIRST 
