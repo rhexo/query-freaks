@@ -16,7 +16,7 @@ SQL metalanguage in c++ context. Using template issue to define sql expression. 
     sql::var<_sel::f_name>,
     sql::var<_sel::f_count>    
     > _args(
-            sql::var<_sel::f_name>(std::string("John")),
+            sql::var<_sel::f_name>(std::string("'John'")),
             sql::var<_sel::f_count>(99)
             );
 
@@ -54,7 +54,7 @@ SQL metalanguage in c++ context. Using template issue to define sql expression. 
     having<
       cond<
         cond<field<QSTR("F_2") >, GT, QSTR("100") >, AND,
-        cond<field<QSTR("F_3") >, EQ, QSTR("JB7") >
+        cond<field<QSTR("F_3") >, EQ, QSTR("'JB7'") >
         > >,
     orderby<
       expr<field<QSTR("F_1") >, DESC, LAST>,
