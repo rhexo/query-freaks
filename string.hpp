@@ -6,8 +6,6 @@
   * This code distribute under private license
   */
 
-
-#include <boost/mpl/string.hpp>
 #include <string>
 #include <cstddef>
 

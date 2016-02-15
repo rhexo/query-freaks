@@ -6,8 +6,6 @@
   * This code distribute under private license
   */
 
-#include <boost/mpl/placeholders.hpp>
-#include <boost/mpl/vector_c.hpp>
 #include <string>
 
 #include <query-freaks/sql_base.hpp>
