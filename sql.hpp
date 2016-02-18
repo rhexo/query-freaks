@@ -18,6 +18,7 @@
 #include <query-freaks/groupby.hpp>
 #include <query-freaks/having.hpp>
 #include <query-freaks/orderby.hpp>
+#include <query-freaks/insert.hpp>
 
 namespace sql {
 
