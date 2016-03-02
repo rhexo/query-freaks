@@ -26,7 +26,8 @@ namespace sql {
     T value;
     
     template <class ...Args>
-    std::string operator()(binder<Args...>& b) {return value();}
+    std::string operator()(binder<Args...>& b) 
+    {return value();}
     
   };
 

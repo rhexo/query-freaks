@@ -20,5 +20,6 @@
 #include <query-freaks/select.hpp>
 #include <query-freaks/insert.hpp>
 #include <query-freaks/update.hpp>
+#include <query-freaks/delete.hpp>
 
 #endif

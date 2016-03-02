@@ -22,7 +22,9 @@ namespace sql {
     /** Expression with parameters */
     template <class ...Args>
     std::string operator()(binder<Args...>& b) {      
-      return Left()(b) + std::string(" = ") + Right()(b);
+      return Left()(b) + std::string(" = ") + ( b.template check<Right>() ? 
+                                                b.template get<Right>()(b) : 
+                                                Right()(b) );
     }
     
     /** Empty parameter list */
