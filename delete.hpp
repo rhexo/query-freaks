@@ -14,11 +14,11 @@ namespace sql {
 
 
   template <class From, class Where>
-  struct delete
+  struct _delete
   {
   public:
     
-    delete() {}
+    _delete() {}
 
     /** Expression with parameters */
     template <class ...Args>
