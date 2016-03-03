@@ -97,12 +97,12 @@ namespace sql {
     /** Expression with parameters */
     template <class ...Args>
     std::string operator()(binder<Args...>& b) {      
-      return std::string("(") + helper::impl_fields_part<0,Fields...>()(b) + std::string(")");
+      return helper::impl_fields_part<0,Fields...>()(b);
     }
     
     /** Empty parameter list */
     std::string operator()() {      
-      return std::string("(") + helper::impl_fields_part<0,Fields...>()() + std::string(")");    
+      return std::string("(") + helper::impl_fields_part<0,Fields...>()() + std::string(") ");    
     }
     
   };
@@ -123,7 +123,7 @@ namespace sql {
       if (std::is_same<Fields,none>::value)
         return std::string("INTO ") + Table()(b) + std::string(" ");
 
-      return std::string("INTO ") + Table()(b) + std::string(" ") + Fields()(b) + std::string(" ") ;
+      return std::string("INTO ") + Table()(b) + std::string(" (") + Fields()(b) + std::string(") ") ;
 
     }       
     

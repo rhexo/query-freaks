@@ -107,7 +107,7 @@ namespace sql {
       return 
         std::string("SELECT ") + 
         //helper::impl_select_part<0,Fields...>()(b) +
-        Fields()(b) +
+        Fields()(b) + std::string(" ") + 
         From()(b) + 
         Where()(b) + 
         (std::is_same<GroupBy,none>::value ?
