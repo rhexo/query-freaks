@@ -177,15 +177,15 @@ namespace sql {
       /** expression contains query parameters */
       template <class ...Args>
       std::string operator()(binder<Args...>& b) {
-        return std::string(", ") + 
+        return std::string(", ") + std::string(" (") + 
           ( b.template check<F>() ? 
             b.template get<F>()(b) : 
-            F()(b) ) + impl_values_part<N+1, Fields...>()(b);
+            F()(b) ) + std::string(") ")impl_values_part<N+1, Fields...>()(b);
       }
       
       /** expression without parameters */
       std::string operator()() {
-        return std::string(", ") + F()() + impl_values_part<N+1, Fields...>()();
+        return std::string(", ") + std::string(" (") + F()() + std::string(") ") + impl_values_part<N+1, Fields...>()();
       }
 
     };
@@ -199,15 +199,17 @@ namespace sql {
       // operator implementation of first entry
       template <class ...Args>
       std::string operator()(binder<Args...>& b) {
-        return  
+        return std::string(" (") + 
           ( b.template check<F>() ? 
             b.template get<F>()(b) : 
-            F()(b) ) + impl_values_part<1, Fields...>()(b);
+            F()(b) ) +
+          std::string(") ") + 
+          impl_values_part<1, Fields...>()(b);
       }
       
       /** expression without query parameters */
       std::string operator()() {
-        return F()() + impl_values_part<1, Fields...>()();
+        return std::string(" (") + F()() std::string(") ") +  impl_values_part<1, Fields...>()();
       }
 
     };
