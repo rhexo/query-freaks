@@ -141,11 +141,11 @@ namespace sql {
 
 
   template <class Table, class Set, class From = none, class Where = none, class Returning = none>
-  struct update
+  struct _update
   {
   public:
     
-    update() {}
+    _update() {}
 
     /** Expression with parameters */
     template <class ...Args>

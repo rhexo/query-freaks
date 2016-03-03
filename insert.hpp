@@ -236,11 +236,11 @@ namespace sql {
 
   // INSERT section <INTO<...>, VALUES<...> >
   template <class Into, class Values> 
-  struct insert
+  struct _insert
   {
   public:
     
-    insert() {}
+    _insert() {}
 
     /** Expression with parameters */
     template <class ...Args>

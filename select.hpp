@@ -95,11 +95,11 @@ namespace sql {
 
   /** define sql::select */
   template <class Fields, class From, class Where, class GroupBy = none, class Having = none, class OrderBy = none>
-  struct select
+  struct _select
   {
     public:
     
-    select() {}
+    _select() {}
     
     /** implement select directive */
     template <class ...Args>
