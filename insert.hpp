@@ -102,7 +102,7 @@ namespace sql {
     
     /** Empty parameter list */
     std::string operator()() {      
-      return std::string("(") + helper::impl_fields_part<0,Fields...>()() + std::string(") ");    
+      return helper::impl_fields_part<0,Fields...>()();    
     }
     
   };
