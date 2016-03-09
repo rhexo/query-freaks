@@ -152,7 +152,7 @@ namespace sql {
     std::string operator()(binder<Args...>& b) {      
       return 
         std::string("UPDATE ") + 
-        Table()(b) +  
+        Table()(b) + std::string(" ") + 
         Set()(b) + 
         (std::is_same<From,none>::value ?
          std::string("") : 
